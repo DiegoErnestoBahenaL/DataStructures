@@ -3,17 +3,15 @@
 
 int main (){
 
-    int number, *pNumber;
+    int number = 10;
 
-    number = 10;
+    int *pNumber = &number;
 
-    pNumber = &number;
+    printf("Number is: %d\n", number);
 
-    printf("number is: %d\n", number);
+    printf ("The address *pNumber points to is: %p\n", (void *) &number);
 
-    printf ("the address pointerNumber points to is: %p\n", (void *) &number);
-
-    printf ("the value *pNumber points is: %d\n", *pNumber);
+    printf ("The value *pNumber points is: %d\n", *pNumber);
 
     return 0;
 }

@@ -3,9 +3,7 @@
 
 int main (){
 
-    int number;
-
-    number = 10;
+    int number = 10;
 
     printf("number is: %d\n", number);
 

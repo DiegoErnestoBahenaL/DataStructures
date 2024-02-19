@@ -21,6 +21,8 @@ int main (){
     {
         printf("El elemento numero %d es %d\n", i + 1,* (pValue + i));
     }
+
+    free(pValue);
     
 
     return 0;
