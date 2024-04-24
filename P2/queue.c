@@ -19,20 +19,49 @@ int main (){
 
     pNode first = NULL, last = NULL;
 
-    int input;
+    int option = 0, input;
 
-    push(&first, &last, 10);
-    push(&first, &last, 20);
-    push(&first, &last, 30);
-    push(&first, &last, 40);    
-    push(&first, &last, 50);
-    push(&first, &last, 60);
+    while (option != 4){
 
-    pop(&first, &last);
+        printf("\n1.Push\n2.Pop(Show)\n3.Remove Elements\n4.Exit\n");
 
-    scanf("%d", &input);
+        scanf("%d",&option);
 
-    removeElements(&first, &last, input);
+        switch (option)
+        {
+            case 1:
+
+                printf("Enter the new element:\n");
+
+                scanf("%d", &input);
+
+                push (&first, &last, input);
+            break;
+
+            case 2:                
+                printf("Popped element: %d\n", pop(&first, &last)); 
+            break;
+
+            case 3:
+                printf("Enter the number of elements to remove:\n");
+
+                scanf("%d", &input);
+
+                printf("Removed Elements:\n");
+
+                removeElements(&first, &last, input);
+            break;
+
+            case 4:
+
+            break;
+            
+            default:
+
+                printf("Enter a valid option.\n");       
+            break;
+        }
+    }
 
     return 0;
 }
